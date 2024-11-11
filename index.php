@@ -17,6 +17,7 @@
         <input type="number" name="preco" required>
         <input type="submit" value="Adicionar Produto">
     </form>
+    <br>
     <hr>
     <h2>Lista de Produtos</h2>
     <div>

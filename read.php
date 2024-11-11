@@ -10,6 +10,7 @@ if ($result->num_rows > 0) { // Se há resultados
     </th><th>Nome
     </th><th>Marca
     </th><th>Preço
+    </th><th>Ação
     </th></tr>";
     while ($row = $result->fetch_assoc()) { // Para cada produto
         echo "<tr>
@@ -18,8 +19,8 @@ if ($result->num_rows > 0) { // Se há resultados
                 <td>" . $row["Marca"] . "</td>
                 <td>" . $row["Preço"] . "</td>
                 <td>
-                    <a href='update.php?id=" . $row["id"] . "'>Editar</a>
-                    <a href='delete.php?id=" . $row["id"] . "'>Excluir</a>
+                    <a href='update.php?id=" . $row["id"] . "' class='update'>Editar</a>
+                    <a href='delete.php?id=" . $row["id"] . "' class='delete'>Excluir</a>
                 </td>
               </tr>";
     }

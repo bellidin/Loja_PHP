@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['Nome']; // Recebe o novo nome
     $marca = $_POST['Marca']; // Recebe a nova marca
     $preco = $_POST['Preço']; // Recebe a nova marca
-    $sql = "UPDATE produto SET nome='$nome', marca='$marca', preco='$preco' WHERE id=$id"; // Preparando a atualização
+    $sql = "UPDATE produto SET Nome='$nome', Marca='$marca', Preço='$preco' WHERE id=$id"; // Preparando a atualização
 
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php"); // Redireciona a atualização para bem-sucedida
@@ -35,13 +35,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h1>Atualizar Produto</h1>
     <form action="" method="POST">
         <label>Nome:</label>
-        <input type="text" name="nome" value="<?php echo $produto['Nome']; ?>" required>
+        <input type="text" name="Nome" value="<?php echo $produto['Nome']; ?>" required>
         <label>Marca:</label>
-        <input type="text" name="marca" value="<?php echo $produto['Marca']; ?>" required>
+        <input type="text" name="Marca" value="<?php echo $produto['Marca']; ?>" required>
         <label>Preço:</label>
-        <input type="number" name="preco" value="<?php echo $produto['Preço']; ?>" required>
+        <input type="number" name="Preço" value="<?php echo $produto['Preço']; ?>" required>
         <input type="submit" value="Atualizar">
+        <div class="a">
+        <a href="index.php">Cancelar</a> <!-- Link para voltar -->
+        </div>
     </form>
-    <a href="index.php">Cancelar</a> <!-- Link para voltar -->
 </body>
 </html>
