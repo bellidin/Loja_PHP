@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     background: url(img-background.jpg) no-repeat;
     background-size: cover;
-    color: #333;
+    color: #ddeac2;
     line-height: 1.6;
     margin: 20px;
 }
@@ -59,6 +59,14 @@ input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
+    background-color: #b3b3b3;
+}
+
+input[type="text"]:hover {
+    background-color: #c4c4c4;
+}
+input[type="number"]:hover {
+    background-color: #c4c4c4;
 }
 
 input[type="submit"] {
@@ -131,6 +139,7 @@ table {
     margin: 20px 0;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    color: #333;
 }
 
 /* Estilos para o cabeçalho da tabela */
@@ -206,9 +215,14 @@ a.delete:hover {
     transition: background-color 0.3s;
     text-decoration: none;
     margin-top: 15px;
+    text-decoration: none;
 }
 
 .a:hover {
     background-color: #c55252; /* Cor mais escura ao passar o mouse */
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}

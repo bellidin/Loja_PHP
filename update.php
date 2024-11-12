@@ -5,7 +5,7 @@ if (isset($_GET['id'])) { // Verifica se o ID foi passado
     $id = $_GET['id']; // Recebe o ID
     $sql = "SELECT * FROM produto WHERE id=$id"; // Consulta o usuário
     $result = $conn->query($sql); // Executa a consulta
-    $usuario = $result->fetch_assoc(); // Obtém os dados do usuário
+    $produto = $result->fetch_assoc(); // Obtém os dados do usuário
 }
 
 // O formulário foi enviado
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h1>Atualizar Produto</h1>
-    <form action="" method="POST">
+    <form action="store.php" method="POST">
         <label>Nome:</label>
         <input type="text" name="Nome" value="<?php echo $produto['Nome']; ?>" required>
         <label>Marca:</label>
